@@ -4,6 +4,10 @@ __pycache__/
 dbt/profiles.yml
 dbt/
 scripts/
+task_1_sql/dbt/profiles.yml
+task_1_sql/dbt/.user.yml
+!task_1_sql/dbt/
+
 
 # ====================
 # Python

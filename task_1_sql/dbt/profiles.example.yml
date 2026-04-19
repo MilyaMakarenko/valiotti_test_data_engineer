@@ -1,0 +1,12 @@
+valiotti_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: #your_user
+      password: #your_password
+      dbname: valiotti_db
+      port: 5432
+      schema: public
+      threads: 4

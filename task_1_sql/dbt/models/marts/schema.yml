@@ -1,0 +1,97 @@
+version: 2
+
+models:
+  # 1 Текущее распределение статусов
+  - name: orders_current_stats
+    description: |
+      **Current number of orders by status**
+      
+      **Business question ** "How many orders are currently in each status?"
+      
+      **Data source ** `stg_orders_current` (only current/actual statuses)
+      
+    columns:
+      - name: status
+        description: |
+          Order status.
+          Possible values: new, processing, shipped, delivered, cancelled
+          
+      - name: total_orders
+        description: |
+          Number of orders in this status
+
+  # 2 История статусов по заказам
+  - name: orders_history_analysis
+    description: |
+      **How many times each order has been in each status**
+      
+      **Business question ** "Did any order have non-standard transitions?"
+      
+      **Data source ** `orders_snapshot` (change history)
+      
+    columns:
+      - name: order_id
+        description: "Unique order identifier"
+        
+      - name: status
+        description: "Order status"
+        
+      - name: times_in_status
+        description: |
+          Number of times the order entered this status.
+          Normal value = 1.
+          If >1 — means there was a return to this status
+          
+      - name: first_time
+        description: "First timestamp when order entered this status"
+        
+      - name: last_time
+        description: "Last timestamp when order entered this status"
+
+
+
+  # 3 Конверсия по воронке
+  - name: orders_funnel
+    description: |
+      **Order funnel analysis from creation to delivery.**
+      
+      **Business questions **
+      - "What percentage of orders reach delivery?"
+      - "How many orders get cancelled?"
+      
+      **Data source ** `orders_snapshot`
+      
+    columns:
+      - name: new_orders
+        description: |
+          **Number of unique orders that ever reached 'new' status**
+          This represents all orders in the system
+          
+      - name: processing_orders
+        description: |
+          **Number of unique orders that reached 'processing' status**
+          Shows how many orders started being processed
+          
+      - name: shipped_orders
+        description: |
+          **Number of unique orders that were shipped**
+          
+      - name: delivered_orders
+        description: |
+          **Number of unique orders successfully delivered**
+          Target metric
+          
+      - name: cancelled_orders
+        description: |
+          **Number of unique orders that were cancelled**
+          Important for churn/loss analysis
+          
+      - name: conversion_rate
+        description: |
+          **Conversion rate from 'new' to 'delivered'**
+          
+          Formula: `(delivered_orders / new_orders) * 100`
+          
+          Target value: > 70% for a successful service
+
+  

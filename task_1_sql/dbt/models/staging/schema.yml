@@ -1,0 +1,33 @@
+version: 1
+
+sources:
+  - name: raw
+    database: valiotti_db
+    schema: raw
+    tables:
+      - name: stg_orders
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+        loaded_at_field: updated_at
+
+models:
+  - name: stg_orders_deduplicated
+    description: "Cleaned data with duplicates removed"
+    columns:
+      - name: order_id
+        description: "Unique identifier for the order"
+        tests:
+          - not_null
+          - unique
+      - name: status
+        description: "Current status"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['new', 'processing', 'shipped', 'delivered', 'cancelled']
+      - name: updated_at
+        description: "Datatime of updating"
+        tests:
+          - not_null
+          

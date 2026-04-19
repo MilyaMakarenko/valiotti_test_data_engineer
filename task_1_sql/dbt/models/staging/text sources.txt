@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw from PostgreSQL"
+    tables:
+      - name: stg_orders
+        description: "ТOrders table from PostgreSQL"
+        columns:
+          - name: order_id
+            description: "order ID"
+          - name: status
+            description: "order status"
+          - name: updated_at
+            description: "update timestamp"

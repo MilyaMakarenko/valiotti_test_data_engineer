@@ -1,0 +1,8 @@
+models/
+├── staging/
+│   └── schema.yml        
+├── marts/
+│   └── schema.yml        
+snapshots/
+│   └── schema.yml        
+└── sources.yml           
