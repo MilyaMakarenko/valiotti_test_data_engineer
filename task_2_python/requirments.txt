@@ -1,0 +1,26 @@
+# Core dependencies
+# ============================================
+boto3==1.34.0
+cryptography==41.0.7
+
+
+# AWS Lambda runtime (if deploying to Lambda)
+# ============================================
+# These are usually included in Lambda, but listed for reference
+# aws-lambda-powertools==2.37.0  # optional: for better logging and tracing
+
+
+# Development & testing (not needed in production)
+# ============================================
+# pytest==7.4.0          # for unit tests
+# moto==4.2.0            # for mocking AWS services locally
+# flake8==6.0.0          # for linting
+# black==23.9.0          # for code formatting
+# mypy==1.5.0            # for type checking
+
+
+# Version notes
+# ============================================
+# boto3 >= 1.26.0  : required for S3 Express support
+# cryptography >= 39.0.0 : required for Fernet (Python 3.8+)
+# Python >= 3.9    : recommended for AWS Lambda
