@@ -6,9 +6,9 @@
 
 ## Решение
 
-<img width="400" height="208" alt="image" src="https://github.com/user-attachments/assets/08ba3daf-1ebb-4a3e-b6ab-bccf8bdc2cec" />
+<img width="700" height="208" alt="image" src="https://github.com/user-attachments/assets/08ba3daf-1ebb-4a3e-b6ab-bccf8bdc2cec" />
 
-<img width="400" height="174" alt="image" src="https://github.com/user-attachments/assets/dbb9d295-f66a-4039-ac7d-727e538c2d1f" />
+<img width="700" height="174" alt="image" src="https://github.com/user-attachments/assets/dbb9d295-f66a-4039-ac7d-727e538c2d1f" />
 
 
 
