@@ -7,6 +7,8 @@ scripts/
 task_1_sql/dbt/profiles.yml
 task_1_sql/dbt/.user.yml
 !task_1_sql/dbt/
+dbt_packages/
+task_1_sql/dbt_packages/
 
 
 # ====================
