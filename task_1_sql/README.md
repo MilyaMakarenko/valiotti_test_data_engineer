@@ -20,3 +20,11 @@ dpt модель:
 
  Сгенерирована документация
  ![alt text](image-3.png)
+
+ схема DB
+ <img width="2426" height="897" alt="image" src="https://github.com/user-attachments/assets/e8dc5069-ea2a-4253-8350-3ad708479aed" />
+
+ Сам проект тоже дб заполнен (семантика)
+ <img width="2112" height="1107" alt="image" src="https://github.com/user-attachments/assets/9e8daab8-56f7-48f8-98ba-54ba5f75fba3" />
+
+
